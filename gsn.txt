@@ -1,0 +1,26 @@
+algorithme 
+variable  
+	tableau N(3):chaine de caractere
+	tableau T(3):entier
+	i,j,nombre_a:entier
+	pttc,pht,p,tva,s:reel
+
+debut
+	pour i <-- 0 a nombre_a faire
+		ecrire("Donner le nom et prénom du client n'",i+1)
+		lire(N(i))
+		s=0
+		pttc=0
+		pour j <-- 0 a nombre_a faire
+			ecrire("Donner le prix de l’article ",i+1)
+			lire(p)
+			pht=p-p*0.02
+			tva=pht*0.15
+			pttc=pht+tva
+			s=s+pttc
+		fin pour
+		T(i)=s
+	fin pour
+	pour i <-- 0 a nombre_a faire
+		ecrire("Le Total à payer pour le client ",N(i)," est : ",T(i))
+	fin pour
